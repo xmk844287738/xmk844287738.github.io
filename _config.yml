@@ -5,7 +5,7 @@ header-img: img/post-bg-desk.jpg
 email: 844287738@qq.com
 description: "博客模板"
 keyword: "Windows,Linux,Golang,Python,小麦客"
-url: "http://xmk844287738.github.io"          # your host, for absolute URL
+url: "https://xmk844287738.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/xmk844287738/xmk844287738.github.io.git" # you code repository
 
