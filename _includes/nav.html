@@ -27,8 +27,10 @@
                 </ul>
                 
                 <!-- 网易云音乐外链 -->
-                 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1373661216&auto=0&height=66"></iframe>
-    
+                 <div id="wanyiyunWl">
+	                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=256 height=86 src="//music.163.com/outchain/player?type=2&id=1373661216&auto=0&height=66"></iframe>
+                </div>
+                
             </div>
         </div>
         <!-- /.navbar-collapse -->
@@ -36,6 +38,23 @@
     <!-- /.container -->
 </nav>
 <script>
+    // 网易云音乐外链样式
+    function ScreenWidth() {
+			var wanyiyunWl = document.getElementById("wanyiyunWl")
+			if (
+				/phone|pad|pod|iPhone|iPod|ios|iPad|Android|Fennec|BlackBerry|Mobile|IEMobile|MQQBrowser|JUC|Fennec|WosBrowser|BrowserNG|WebOS|Symbian|Windows Phone/i
+				.test(navigator.userAgent)) {				
+				wanyiyunWl.style.cssText = "webkit-overflow-scrolling: touch;overflow-y: scroll;"  // 移动端样式
+// 				console.log("移动端样式");
+			} else {
+				wanyiyunWl.style.cssText = "webkit-overflow-scrolling: touch; height:90px; width:150px;"  // PC端样式
+// 				console.log("PC端样式");
+		}
+	}
+	window.onload = function() {
+		ScreenWidth()
+	}
+    
     // Drop Bootstarp low-performance Navbar
     // Use customize navbar with high-quality material design animation
     // in high-perf jank-free CSS3 implementation
